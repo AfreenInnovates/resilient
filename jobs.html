@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>RESILIENT: Jobs</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Mono:wght@400;500&display=swap');
+
+    :root {
+      --card-height: 30vw;
+      --card-margin: 4vw;
+      --card-top-offset: 1em;
+      --numcards: 4;
+      --outline-width: 0px;
+    }
+
+    main {
+      padding: 50px 100px;
+      margin-bottom: 100px;
+    }
+
+    #cards {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(var(--numcards), var(--card-height));
+      gap: var(--card-margin);
+      padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+      margin-bottom: var(--card-margin);
+    }
+
+    .job-card {
+      position: sticky;
+      top: 0;
+      padding-top: calc(var(--index) * var(--card-top-offset));
+    }
+
+    .card-content {
+
+      background: #fff;
+      color: #131212;
+      border-radius: 2rem;
+      overflow: hidden;
+      display: grid;
+      grid-template-areas: "text img";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      align-items: stretch;
+      padding: 1.4em;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      border: 2px solid black;
+
+    }
+
+    .card-content:hover {
+
+      transform: translateY(-5px);
+    }
+
+    .card-content>div {
+      grid-area: text;
+      width: 95%;
+      max-width: 800px;
+      place-self: center;
+      text-align: left;
+      display: grid;
+      gap: 1em;
+      place-items: start;
+    }
+
+    .card-content>figure {
+      grid-area: img;
+      overflow: hidden;
+    }
+
+    .card-content>figure>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: .4em;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-family: 'Cormorant Garamond', serif;
+      margin: 0;
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 1.42;
+      font-size: 1.1rem;
+    }
+
+    .job-link {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .job-link:hover {
+      text-decoration: underline;
+      color: #007bff;
+    }
+
+    .job-intro h2 {
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .job-intro p {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      font-family: "Raleway", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <div class="logo">
+      <img src="images/blocks-2.png">
+      <h1>RESILIENT</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">GUIDES</button>
+            <div class="dropdown-content">
+              <a href="infrastructure.html">Infrastructure</a>
+              <a href="communities.html">Communities</a>
+              <a href="library.html">Library</a>
+            </div>
+          </div>
+        </li>
+
+        <div class="dropdown">
+          <button class="dropbtn">SOCIAL</button>
+          <div class="dropdown-content">
+            <a href="disc.html">Discussion</a>
+            <a href="news.html">News</a>
+            <a href="jobs.html">Jobs</a>
+          </div>
+        </div>
+        </li>
+
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <div class="job-intro">
+    <h2>TECH JOBS FOR CLIMATE CHANGE:</h2>
+    <p>Explore the impact of tech careers in driving climate solutions and shaping a sustainable future</p>
+  </div>
+  </div>
+
+
+  <!-- <div class="job-listings">
+
+    <div class="job-card">
+      <h2 class="job-title">State Data Manager</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18542/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+    <div class="job-card">
+      <h2 class="job-title">Technical Support Engineer</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18568/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+    <div class="job-card">
+      <h2 class="job-title">Data & Evaluation Director (Community and Civic Engagement)</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+    <div class="job-card">
+      <h2 class="job-title">Lead Product Designer</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18518/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+    <div class="job-card">
+      <h2 class="job-title">Senior UX Designer II</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18541/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+
+
+    <div class="job-card">
+      <h2 class="job-title">Head of Engineering</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18492/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+
+
+    <div class="job-card">
+      <h2 class="job-title">Applied Scientist, Agricultural GHG Programs</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18519/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+
+    <div class="job-card">
+      <h2 class="job-title">Data & Evaluation Director (Community and Civic Engagement)</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+
+    <div class="job-card">
+      <h2 class="job-title">Data & Evaluation Director (Community and Civic Engagement)</h2>
+      <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla
+        tristique vehicula.</p>
+      <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+    </div>
+
+
+
+  </div> -->
+
+
+  <main>
+    <ul id="cards" class="job-listings">
+      <!-- Job Card 1 -->
+      <li class="card job-card" id="card-1">
+        <div class="card-content">
+          <div>
+            <h1>State Data Manager</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18542/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="State Data Manager">
+          </figure>
+        </div>
+      </li>
+
+      <!-- Job Card 2 -->
+      <li class="card job-card" id="card-2">
+        <div class="card-content">
+          <div>
+            <h1>Technical Support Engineer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18568/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/1181332/pexels-photo-1181332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Technical Support Engineer">
+          </figure>
+        </div>
+      </li>
+
+      <!-- Job Card 3 -->
+      <li class="card job-card" id="card-3">
+        <div class="card-content">
+          <div>
+            <h1>Data & Evaluation Director (Community and Civic Engagement)</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/5029859/pexels-photo-5029859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Data & Evaluation Director">
+          </figure>
+        </div>
+      </li>
+
+
+      <!-- 5 -->
+      <li class="card job-card" id="card-3">
+        <div class="card-content">
+          <div>
+            <h1>Applied Scientist, Agricultural GHG Programs</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Data & Evaluation Director">
+          </figure>
+        </div>
+      </li>
+
+      <!-- 6 -->
+      <li class="card job-card" id="card-3">
+        <div class="card-content">
+          <div>
+            <h1>Senior UX Designer II</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Data & Evaluation Director">
+          </figure>
+        </div>
+      </li>
+
+      <!-- 7 -->
+      <li class="card job-card" id="card-3">
+        <div class="card-content">
+          <div>
+            <h1>Head of Engineering</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae magna vitae nulla tristique
+              vehicula.</p>
+            <a href="https://techjobsforgood.com//jobs/18543/?ref=homepage" class="job-link">Learn More</a>
+          </div>
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Data & Evaluation Director">
+          </figure>
+        </div>
+      </li>
+
+    </ul>
+  </main>
+
+
+  <script src="js/jobs.js"></script>
+
+</body>
+
+</html>

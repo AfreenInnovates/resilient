@@ -1,0 +1,22 @@
+.about-content {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.about-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.co2-emissions {
+  padding: 100px;
+  text-align: center;
+  margin-top: 5rem;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Page</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/post.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <div class="logo">
+      <img src="images/blocks-2.png">
+      <h1>RESILIENT</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">GUIDES</button>
+            <div class="dropdown-content">
+              <a href="infrastructure.html">Infrastructure</a>
+              <a href="communities.html">Communities</a>
+              <a href="library.html">Library</a>
+            </div>
+          </div>
+        </li>
+
+        <div class="dropdown">
+          <button class="dropbtn">SOCIAL</button>
+          <div class="dropdown-content">
+            <a href="disc.html">Discussion</a>
+            <a href="news.html">News</a>
+            <a href="jobs.html">Jobs</a>
+          </div>
+        </div>
+        </li>
+
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+
+  <main>
+    <section class="post">
+      <!-- Content of the post -->
+      <div class="post-header">
+        <div class="user-info">
+          <h2>instrumentweb</h2>
+          <p>Posted on May 12, 2024</p>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Do you think we'll see more bike lanes and pedestrian-friendly streets as cities adapt to climate change?
+          How would that impact your daily commute?</p>
+      </div>
+    </section>
+
+    <div class="comment-input">
+      <textarea id="commentInput" placeholder="Add your comment here..."></textarea>
+      <button onclick="addComment()">Submit</button>
+    </div>
+
+
+    <section class="comments">
+
+      <h2>Comments</h2>
+      <div id="commentsContainer">
+        <div class="comment">
+          <div class="comment-info">
+            <h3>ZenRider</h3>
+            <p>Posted on May 13, 2024</p>
+          </div>
+          <p>
+            Absolutely, I hope so! Having more bike lanes would make my commute much safer and enjoyable. It's also a
+            great way to encourage more people to bike instead of drive, reducing emissions and congestion.
+          </p>
+        </div>
+
+
+        <div class="comment">
+          <div class="comment-info">
+            <h3>UrbanExplorer</h3>
+            <p>Posted on May 14, 2024</p>
+          </div>
+          <p>
+            I'm all for it! I live in a city where biking is already popular, but more dedicated lanes would make it
+            even better. Plus, walking around would be much nicer without having to dodge cars all the time.
+          </p>
+        </div>
+
+        <div class="comment">
+          <div class="comment-info">
+            <h3>EcoNomad</h3>
+            <p>Posted on May 14, 2024</p>
+          </div>
+          <p>
+            While I like the idea, I wonder how cities will handle the logistics. Will there be enough space for both
+            cars and bikes? And what about parking? It's a great concept, but implementation might be tricky.
+          </p>
+        </div>
+
+        <div class="comment">
+          <div class="comment-info">
+            <h3>EcoNomad</h3>
+            <p>Posted on May 14, 2024</p>
+          </div>
+          <p>
+            While I like the idea, I wonder how cities will handle the logistics. Will there be enough space for both
+            cars and bikes? And what about parking? It's a great concept, but implementation might be tricky.
+          </p>
+        </div>
+
+        <div class="comment">
+          <div class="comment-info">
+            <h3>GreenGlobeTrotter</h3>
+            <p>Posted on May 13, 2024</p>
+          </div>
+          <p>
+            I'm excited about the potential for more pedestrian-friendly streets. It would create a more vibrant urban
+            environment, with people walking, biking, and socializing outdoors. Plus, it's a win for public health and
+            the environment.
+          </p>
+        </div>
+
+        <div class="comment">
+          <div class="comment-info">
+            <h3>TransitTrailblazer</h3>
+            <p>Posted on May 14, 2024</p>
+          </div>
+          <p>
+            I think it's a step in the right direction, but cities also need to invest in public transit to complement
+            these changes. Not everyone can bike or walk long distances, so reliable and efficient public transportation
+            is key for a sustainable city.
+          </p>
+        </div>
+
+      </div>
+      <!-- Repeat the above comment structure -->
+
+    </section>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate News</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* CSS styles */
+        html {
+            background: #fff;
+            font-family: sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            border: 1px solid black;
+        }
+
+        div,
+        h2,
+        p,
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            margin: 0 auto;
+            max-width: 1040px;
+            padding: 20px;
+        }
+
+        .columns {
+            display: flex;
+        }
+
+        .column {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .main-column {
+            flex: 2;
+        }
+
+        .article {
+            background: white;
+            color: #333;
+
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            flex-basis: auto;
+            margin: 10px;
+        }
+
+        .article-image {
+            background: #f2f2f2;
+
+            display: block;
+            padding-top: 75%;
+            position: relative;
+            width: 100%;
+        }
+
+        .article-image img {
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .article-image.is-3by2 {
+            padding-top: 66.6666%;
+        }
+
+        .article-image.is-16by9 {
+            padding-top: 56.25%;
+        }
+
+        .article-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .article-title {
+            color: #000;
+
+            flex-shrink: 0;
+            font-size: 1.4em;
+            font-weight: bold;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .article-content {
+            flex: 1;
+            margin-top: 5px;
+        }
+
+        .article-info {
+            display: flex;
+            font-size: 0.85em;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .news-intro h2 {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-family: "Raleway", sans-serif;
+        }
+
+        .news-intro p {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-family: "Raleway", sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <img src="images/blocks-2.png">
+            <h1>RESILIENT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">GUIDES</button>
+                        <div class="dropdown-content">
+                            <a href="infrastructure.html">Infrastructure</a>
+                            <a href="communities.html">Communities</a>
+                            <a href="library.html">Library</a>
+                        </div>
+                    </div>
+                </li>
+
+                <div class="dropdown">
+                    <button class="dropbtn">SOCIAL</button>
+                    <div class="dropdown-content">
+                        <a href="disc.html">Discussion</a>
+                        <a href="news.html">News</a>
+                        <a href="jobs.html">Jobs</a>
+                    </div>
+                </div>
+                </li>
+
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <div class="news-intro">
+        <h2>LATEST NEWS:</h2>
+        <p>Empowering Voices: News Hub for Marginalized Communities, Climate Change, and Infrastructure Updates</p>
+    </div>
+
+
+    <main class="main columns">
+        <section class="column main-column">
+            <a class="article first-article" href="#">
+                <figure class="article-image is-4by3">
+                    <img src="https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2022/06/Untitled-1024-%C3%97-683px-19.jpg"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Community-Led Solutions for Climate-Resilient Cities: The Power of Local Action
+                    </h2>
+                    <p class="article-content">
+                        This piece shines a spotlight on the proactive measures taken by indigenous communities to
+                        combat climate change and foster resilience in their environments. Discover the unique
+                        approaches and traditional knowledge systems employed by these communities to address
+                        environmental challenges and adapt to changing climates. Explore success stories, sustainable
+                        practices, and collaborative initiatives that highlight the pivotal role of indigenous wisdom
+                        and local action in building climate resilience.
+                    </p>
+                    <footer class="article-info">
+                        <span>community</span>
+                        <span>1h ago</span>
+                    </footer>
+                </div>
+            </a>
+
+
+        </section>
+
+        <section class="column">
+            <a class="article" href="#">
+                <figure class="article-image is-3by2">
+                    <img src="https://siwi.org/wp-content/uploads/2021/07/why-water_topics-present-at-launch_water-and-climate.jpg"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Building Drought-Resilient Infrastructure
+                    </h2>
+                    <p class="article-content">
+                        This feature explores cutting-edge strategies and infrastructure innovations designed to
+                        mitigate the impacts of droughts in the face of climate change.
+                    </p>
+                    <footer class="article-info">
+                        <span>Truthout</span>
+                        <span>1h ago</span>
+                    </footer>
+                </div>
+            </a>
+            <a class="article" href="#">
+                <figure class="article-image is-16by9">
+                    <img src="https://development.asia/sites/default/files/explainer/smart-water-mngt-system-01.jpg"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Smart Water Management Systems
+                    </h2>
+                    <p class="article-content">
+                    </p>
+                    <footer class="article-info">
+                        <span>SOURCE</span>
+                        <span>TIME AGO</span>
+                    </footer>
+                </div>
+            </a>
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <main class="main columns">
+        <section class="column main-column">
+            <a class="article first-article" href="#">
+                <figure class="article-image is-4by3">
+                    <img src="https://masterurbanresilience.com/wp-content/uploads/2022/11/3.-Schema.jpg" alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+
+                        Empowering Urban Resilience: Local Solutions for Sustainable Cities
+                    </h2>
+                    <p class="article-content">
+                        This piece shines a spotlight on the proactive measures taken by indigenous communities to
+                        combat climate change and foster resilience in their environments. Discover the unique
+                        approaches and traditional knowledge systems employed by these communities to address
+                        environmental challenges and adapt to changing climates. Explore success stories, sustainable
+                        practices, and collaborative initiatives that highlight the pivotal role of indigenous wisdom
+                        and local action in building climate resilience.
+                    </p>
+                    <footer class="article-info">
+                        <span>community</span>
+                        <span>1h ago</span>
+                    </footer>
+                </div>
+            </a>
+
+
+        </section>
+
+        <section class="column">
+            <a class="article" href="#">
+                <figure class="article-image is-3by2">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5b51df5812b13fce46a6868b/1592283632891-DYKZ7EAU58972ZNGI08E/adelaide1.png"
+                        alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Grassroots Strategies for Climate-Positive Cities </h2>
+                    <p class="article-content">
+                        This feature explores cutting-edge strategies and infrastructure innovations designed to
+                        mitigate the impacts of droughts in the face of climate change.
+                    </p>
+                    <footer class="article-info">
+                        <span>Truthout</span>
+                        <span>1h ago</span>
+                    </footer>
+                </div>
+            </a>
+            <a class="article" href="#">
+                <figure class="article-image is-16by9">
+                    <img src="https://pbs.twimg.com/media/FltGmh_XwAAKgRO.jpg" alt="">
+                </figure>
+                <div class="article-body">
+                    <h2 class="article-title">
+                        Local Solutions for Climate Resilience
+                    </h2>
+                    <p class="article-content">
+                    </p>
+                    <footer class="article-info">
+                        <span>SOURCE</span>
+                        <span>TIME AGO</span>
+                    </footer>
+                </div>
+            </a>
+
+        </section>
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>
